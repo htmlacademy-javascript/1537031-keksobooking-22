@@ -7,7 +7,7 @@ import {
   resetMainPinMarker,
   setUpMap,
   STARTING_LATITUDE,
-  STARTING_LONGITUDE,
+  STARTING_LONGITUDE
 } from './map.js';
 import { getData } from './api.js';
 import { ADDS_COUNT, MIN_ADDS } from './data.js';
@@ -21,11 +21,12 @@ import {
   onResetAdForm
 } from './form.js';
 import { showErrorModal, showSuccessModal } from './success-modal.js';
-import { deactivateFilter, filterAdvertisements } from './filter.js';
+import {deactivateFilter, filterAdvertisements, filterForm} from './filter.js';
 
 const GET_URL = 'https://22.javascript.pages.academy/keksobooking/data';
 
 const setDefaults = () => {
+  filterForm.reset();
   adForm.reset();
   resetMainPinMarker();
   onResetAdForm();
